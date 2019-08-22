@@ -1,41 +1,35 @@
-# hass-fontawesome
+# hass-simple-icons
 
-Use free icons from the [fontawesome](https://fontawesome.com) set in Home-assistant.
+Fork of @thomasloven 's awesome-icons-set for homeassistant.
+
+Use free icons from the [simpleicons](https://simpleicons.org/) set in Home-assistant.
 
 ## Install
 
-The icons are divided into three sets.
 
-- Solid
-- Regular
-- Brands
-
-Copy the html files for the sets you want into `<config>/www/` where `<config>` is your home-assistant config directory (the directory where your `configuration.yaml` resides).
+Copy the html file for the set into `<config>/www/` where `<config>` is your home-assistant config directory (the directory where your `configuration.yaml` resides).
 
 Add the folowing to the `frontend` section of your `configuration.yaml`
 
 ```yaml
 frontend:
   extra_html_url:
-    - /local/hass-fontawesome-solid.html
-    - /local/hass-fontawesome-regular.html
-    - /local/hass-fontawesome-brands.html
+    - /local/hass-simple-icons.html
 ```
-
-> Only add the files you want. They are rather large, and adds to the download size and loading time of your frontend.
-
 Restart home-assistant.
 
 ## Using
 
-Find the icon you want in the [gallery](https://fontawesome.com/icons?d=gallery).
+Find the icon you want on [simpleicons.org](https://simpleicons.org/).
 
-The three icon sets have different prefixes: `fas:`, `far:` and `fab:` respectively.
+Prefix for this set is `si`
+The name of the icon is defined by its filename.
 
-So,
-
-- to get a solid heart, use `fas:heart`
-- to get a heart outline, use `far:heart`
-- to get the twitter symbol, use `fab:twitter`
+Example usage in Home-Assistant:
+`icon: si:github`
 
 
+## Updating the Icons
+
+Use the generate.py python-script (also provided by @thomasloven for fontawesome)
+Slightly modified version for the simple-icon svgs in this repository.
