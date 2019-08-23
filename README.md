@@ -1,4 +1,4 @@
-# hass-simple-icons
+# hass-simpleicons
 
 Fork of @thomasloven's awesome-icons-set for homeassistant.
 
