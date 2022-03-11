@@ -23,5 +23,5 @@ def make_file(directory, name, out):
 
 
 # Run this in /simple-icons
- with open("hass-simple-icons.html", 'w') as out:
-  make_file('icons', 'si', out)
+with open("hass-simple-icons.html", 'w') as out:
+    make_file('icons', 'si', out)
